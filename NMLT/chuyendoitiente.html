@@ -9,16 +9,12 @@
     </HEAD>
     <body>
         <script>
-            let inputsotienvay;
-            let inputlaixuat;
-            let inputsonam;
-             inputlaixuat = prompt(" số tiền cần vay ");
-             inputsotienvay = prompt(" nhập lãi xuât ngân hàng ");
-             inputsonam = prompt("nhập số năm vay");
-             sotienvay = inputsotienvay;
-             laixuat = inputlaixuat;
-             sonam = inputsonam;
-             let sotien = sotienvay*laixuat*sonam;
+            let sotienvay = parseInt(prompt(" số tiền cần vay "));
+            let laixuat = (prompt(" nhập lãi xuât ngân hàng "));
+            let sonam = parseInt(prompt("nhập số năm vay"))
+            let sotien = sotienvay + ( sotienvay *( laixuat/100 )* sonam );
              alert("số tiền phải trả " + sotien);
+             
         </script>
-    </body>
+        </body>
+</HTML>
