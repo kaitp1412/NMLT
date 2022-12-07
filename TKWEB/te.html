@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="cl" onsubmit="return checkNgay();">
+        <label> Nhập tháng bất kì:</label><input type="number" name="month"
+        min="1" max="12" oninput="if(thit.valua=='2'){document.getElementById('year').style.display='block'
+          }else{document.getElementById('year').style.display='none'}"><br>
+       <section id="year">;
+        <label> Nhập năm bất kì :</label><input type="nuber" name="year">;
+        
+       </section>
+        <input type="submit" valua="xác định số ngày"><br>
+        <input type="text" name="ketqua" style="width: 40%">
+    
+       </form>
+       
+       <script>
+          function checkNgay(){
+            with(cl){
+            var m=eval(month.valua);
+           switch(m){
+            case 1:case 3:case 5:case 7: case 8:case 10:case 12:
+             ketqua.valua="Tháng " +m+ "có 31 ngày ";   
+             break;
+                
+            case 2:
+                var y=year.valua;
+                if((y%4==0 && y%100!=0) || (y%400==0)){
+                    ketqua.valua="Tháng" +m+ "năm" +y+ "có 29 ngày";
+                }else{
+                    ketqua.valua="Tháng" +m+ "năm" +y+ "có 28 ngày";
+                }
+                break;
+             default:
+                ketqua.valua=" Tháng "+m+ "có 30 ngày" ;       
+        }     
+         }
+         return false;
+          }    
+         
+        </script>
+</body>
+</html>

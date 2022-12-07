@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        Điểm toán:<input type="number" id ="toan" name="number">
+        <br>
+        <br>
+        Điểm văn:<input type="number" id="van" name="number">
+        <br>
+        <br>
+        Điểm anh:<input type="number" id="anh" name="number">
+        <br>
+        <br>
+
+        <select id="kv"> 
+            <option value="">chọn khu vực</option>
+            <option value="">kv1</option>
+            <option value="">kv2</option>
+            <option value="">kv2NT</option>
+            <option value="">kv3</option>
+
+        </select>
+        <span id="error"></span>
+        <br>
+        <button type="button" onclick="getdiem();">Tính</button>
+    </form>
+    <script>
+        let khuvuc= document.getElementById("kv");
+        let inputToanscore= document.getElementById("toan");
+        let inputVanscore= document.getElementById("van");
+        let inputAnhscore= document.getElementById("anh");
+        let error= document.getElementById("error");
+
+        function getdiem(){
+            if(khuvuc.value =="" || inputAnhscore.value == "" || inputToanscore.value == "" ||
+            inputVanscore.value == "") {
+            error.innerHTML = " Chưa đủ thông tin";
+            error.style.color =" red";
+        } else {
+            var toan = parseInt(inputToanscore.value);
+            var van = parseInt(inputVanscore.value);
+            var anh = parseInt(inputAnhscore.value);
+            
+            let diemkv1 = toan + van + anh + 0.75;
+            let diemkv2 =  toan + van  + anh + 0.25;
+            let diemkv2NT = toan + van + anh + 0.5;
+            let diemkv3 = toan + van + anh;
+
+            if( khuvuc.value == "kv1"){
+                document.write("Tổng điểm thi khối D "+ diemkv1);
+            } else if  (khuvuc.value == "kv2"){
+                document.write("Tổng điểm thi khối D "+ diemkv2);
+            } else if (khuvuc.value == "kv2NT"){
+                document.write("Tổng điểm thi khối D "+ diemkv2NT);
+            } else {
+                document.write("Tổng điểm thi khối D "+ diemkv3);
+            }
+        }
+    }
+    </script>
+</body>
+</html>
