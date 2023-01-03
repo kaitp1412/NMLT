@@ -1,0 +1,198 @@
+#main{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.hidden {
+  
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+   
+
+}
+.head-link2{
+    display: inline-block;
+    justify-content: space-between;
+    
+}
+#conten {
+    text-align: center;
+    margin: auto;
+    font-size: 180%;
+    font-weight: 600;
+   
+
+}
+.cl{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#color {
+
+    color: gray;
+}
+#icon{
+    display: flex;
+    gap: 20px;
+}
+#list-link{
+    padding-right: 20px;
+}
+
+hr{
+    width: 1970px;
+}
+ #colorblack{
+    color: black;
+ }
+.head{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#clear{
+    clear: both;
+}
+.poster1{
+   height: 350px;
+   background-color: black;
+}
+.noidung1{
+    padding-left: 30px;
+    padding-top: 40px;
+    max-width: 600px;
+    height: 400px;
+    float: left;
+    margin: auto;
+}
+#colorwite{
+    color: aliceblue;
+}
+.table1{
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  height: 300px;
+
+}
+.poster2{
+  
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+.noidung2{
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 70%;
+    height: 100%;
+}
+.thumnail{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    padding-top: 150px;
+}
+.conten1{
+    float: left;
+    width: 66% ;
+}
+.inter{
+    font-style: italic;
+}
+.footer{
+   
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    height: 100px;
+    
+}
+.formfooter{
+    padding-top: 10px;
+}
+.conten2{
+    float: right;
+    width: 30%;
+}
+.main2{
+    width: 100%;
+    display: flex;
+   gap: 100px;
+}
+.bodersmall{
+   
+    width: 100%;
+    height: 250px;
+    margin: auto;
+    background-color: rgb(248, 242, 242);
+}
+.noidungsmall{
+    padding-top: 40px;
+    padding-left: 20px;
+    width: 100%;
+}
+.listform2{
+list-style: none;
+}
+@media (min-width:200px) {
+.table1{
+    flex-direction: row ;
+ 
+}
+.main2{
+    flex-direction: row ; 
+}
+.conten1{
+    flex-direction: row ; 
+}
+.conten2{
+    flex-direction: row ; 
+}
+}
+@media (max-width:560px) {
+.table1{
+    flex-direction: column;
+}
+.main2{
+    padding-top: 400px;
+    flex-direction: column;
+}
+.conten1{
+    flex-direction: column;
+}
+.conten2{
+    flex-direction: column;
+}
+.listform2{
+    padding-top: 100px;
+    flex-direction: column;
+}
+.phong{
+    padding-top: 300px;
+}
+#list{
+    flex-direction: column;
+}
+.footer{
+    max-width: 100%;
+}
+.hidden{
+      width: 100%;
+      display: flex;
+      gap: 40px;
+}
+.cl{
+    float: left;
+}
+.noidung1{
+    flex-direction: column;
+}
+.poster1{
+    width: 100%;
+    height: 500px;
+}
+}
